@@ -1,0 +1,8 @@
+{
+  "services": [
+    {"name": "database", "depends_on": []},
+    {"name": "cache", "depends_on": []},
+    {"name": "api", "depends_on": ["database", "cache"]},
+    {"name": "worker", "depends_on": ["api", "database"]}
+  ]
+}
